@@ -1,3 +1,97 @@
-vendor/
-.env
-etc/nginx.conf
+## Reference from SugarCRM github
+##  https://github.com/github/gitignore/blob/master/SugarCRM.gitignore
+##  https://github.com/sugarcrm/sugarcrm_dev/blob/master/.gitignore
+
+# Ignore custom .htaccess stuff.
+/.htaccess
+
+# Ignore large parts of the annoying cache directory without breaking things.
+#/cache/csv/*
+#/cache/dashlets/*
+#/cache/diagnostic/*
+#/cache/dynamic_fields/*
+#/cache/feeds/*
+#/cache/import/*
+#/cache/include/*
+#/cache/jsLanguage/*
+#/cache/modules/*
+#!/cache/modules/emails
+#!/cache/modules/Emails
+#/cache/pdf/*
+#/cache/smarty/cache/*
+#/cache/smarty/templates_c/*
+#/cache/themes/*
+#/cache/xml/*
+/cache/*
+
+# Ignore some files and directories from the custom directory.
+/custom/history/*
+/custom/modulebuilder/*
+/custom/working/*
+/custom/modules/*/Ext/
+/custom/application/Ext/*
+
+# Custom configuration should also be ignored.
+/config.php
+/config_override.php
+
+# The silent upgrade scripts aren't needed.
+silentUpgrade*.php
+# Logs files can safely be ignored.
+*.log
+# The new upload directories (since 6.4).
+/upload/*
+!/upload/upgrades
+!/upload/upgrades/*
+/upload_backup/*
+
+## IDE specific items
+# Eclipse
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+# Emacs
+*~
+\#*\#
+.emacs.desktop
+.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+# IntelliJ Idea
+*.iml
+*.ipr
+*.iws
+.idea/
+# NetBeans
+nbproject/
+# Vim
+.*.sw[a-z]
+*.un~
+Session.vim
+# Windows
+Thumbs.db
+Desktop.ini
+
+## Qobo
+# ZuckerReports
+#custom/ZuckerReports2/archive/*
+# qobo folder
+/qobo/test/*
+/qobo/public/*
+/qobo/config/config.ini
+/qobo/scripts/config.sh
+#qobo/scripts/backup_configrecords.sh
+/qobo/extension/ProspectLists/dynamicTargetLists_config.php
+*.qbini
