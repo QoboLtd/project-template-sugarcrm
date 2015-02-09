@@ -1,7 +1,8 @@
 <?php
+/***CONFIGURATOR***/
 //$sugar_config['default_theme'] = 'Qobo';
 $sugar_config['developerMode'] = getenv('DEV_MODE');
-$sugar_config['logger']['level'] = getenv('fatal');
+$sugar_config['logger']['level'] = getenv('DEV_LOG_LEVEL');
 $sugar_config['disabled_themes'] = '';
 $sugar_config['js_custom_version'] = '';
 $sugar_config['default_module_favicon'] = false;
@@ -29,3 +30,4 @@ $sugar_config['admin_access_control'] = false;
 $sugar_config['default_max_tabs'] = '9';
 $sugar_config['default_permissions']['dir_mode'] = '1517';
 $sugar_config['default_permissions']['file_mode'] = '436';
+/***CONFIGURATOR***/
