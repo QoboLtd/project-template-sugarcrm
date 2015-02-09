@@ -1,3 +1,7 @@
+vendor/
+.env
+etc/nginx.conf
+
 ## Reference from SugarCRM github
 ##  https://github.com/github/gitignore/blob/master/SugarCRM.gitignore
 ##  https://github.com/sugarcrm/sugarcrm_dev/blob/master/.gitignore
