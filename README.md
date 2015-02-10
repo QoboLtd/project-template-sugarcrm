@@ -1,7 +1,8 @@
-project-template
-================
+project-template-sugarcrm
+=========================
 
-This is a template for the new project.
+This is a template for the new project using SugarCRM.  It is heavily based
+on the work done in [project-template](https://github.com/QoboLtd/project-template).
 
 Install
 -------
@@ -12,12 +13,17 @@ When starting a new PHP project, do the following:
 mkdir new-project
 cd new-project
 git init
-git remote add template git@github.com:QoboLtd/project-template.git
+git remote add template git@github.com:QoboLtd/project-template-sugarcrm.git
 git remote update
 git merge template/master
 composer install
-./vendor/bin/phake dotenv:create
+./vendor/bin/phake dotenv:create DB_NAME=sugarcrm
+./vendor/bin/phake app:install
 ```
+
+DB_NAME, the name of the database to use, is the only setting which is required.  The
+rest is being figured out automatically, but you can easily adjust them.  Have a look
+at .env.example file for defaults.
 
 Test
 ----
@@ -28,10 +34,6 @@ before you start working on your changes.  Fire up the PHP web server:
 ```
 php -S localhost:8000
 ```
-
-In your browser navigate to [http://localhost:8000](http://localhost:8000).  
-You should see the standard ```phpinfo()``` page.  If you do, all parts 
-are in place.
 
 Usage
 -----
@@ -66,3 +68,17 @@ Here is how to run your unit tests:
 There's an example one for you, so now you have no excuse NOT to write
 them.
 
+TODO
+----
+
+* Unique configurations set for each SugarCRM installation (config_override.php)
+<pre>
+'passwordsetting' => 
+  array (
+    'SystemGeneratedPasswordON' => true,
+    'generatepasswordtmpl' => 'adb6208f-8e92-165e-abfa-54d8b9c180dc',
+    'lostpasswordtmpl' => 'b15b55e3-2b07-bb68-49d8-54d8b9d532d7',
+    ....
+  )
+  'unique_key' => '353b716a59c9c62c0688392e316e11f1',
+</pre>
