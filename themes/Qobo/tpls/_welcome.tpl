@@ -67,6 +67,7 @@
         {/foreach}
         </li></a>
         {/foreach}
+	{if !empty($LOGOUT_LINK) && !empty($LOGOUT_LABEL)}<a id="logout_link" href='{$LOGOUT_LINK}' class='utilsLink'><li>{$LOGOUT_LABEL}</li></a>{/if}
 
 </div>
 {/if}
