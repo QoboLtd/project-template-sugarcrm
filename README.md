@@ -71,7 +71,7 @@ them.
 TODO
 ----
 
-* Unique configurations set for each SugarCRM installation (config.php/config_override.php)
+* Unique configurations set for each SugarCRM installation (config_override.php)
 <pre>
 'passwordsetting' => 
   array (
