@@ -1,8 +1,27 @@
 <?php
 /***CONFIGURATOR***/
-//$sugar_config['default_theme'] = 'Qobo';
+require_once dirname(__FILE__) . '/vendor/autoload.php';
+try {
+        Dotenv::load(__DIR__);
+        Dotenv::required(array('DB_NAME'));
+}
+catch (\Exception $e) {
+        echo $e->getMessage();
+        exit(1);
+}
+$sugar_config['dbconfig']['db_host_name'] = getenv('DB_HOST');
+$sugar_config['dbconfig']['db_host_instance'] = getenv('DB_HOST_INSTANCE');
+$sugar_config['dbconfig']['db_user_name'] = getenv('DB_USER');
+$sugar_config['dbconfig']['db_password'] = getenv('DB_PASS');
+$sugar_config['dbconfig']['db_name'] = getenv('DB_NAME');
+$sugar_config['dbconfig']['db_type'] = getenv('DB_TYPE');
+$sugar_config['dbconfig']['db_port'] = getenv('DB_PORT');
+$sugar_config['dbconfig']['db_manager'] = getenv('DB_MANAGER');
+$sugar_config['host_name'] = getenv('HOST');
+$sugar_config['site_url'] = getenv('SITE_URL');
 $sugar_config['developerMode'] = getenv('DEV_MODE');
 $sugar_config['logger']['level'] = getenv('DEV_LOG_LEVEL');
+//$sugar_config['default_theme'] = 'Qobo';
 $sugar_config['disabled_themes'] = '';
 $sugar_config['js_custom_version'] = '';
 $sugar_config['default_module_favicon'] = false;

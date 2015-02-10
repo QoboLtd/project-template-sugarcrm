@@ -1,13 +1,4 @@
 <?php
-require_once dirname(__FILE__) . '/vendor/autoload.php';
-try {
-        Dotenv::load(__DIR__);
-        Dotenv::required(array('DB_NAME'));
-}
-catch (\Exception $e) {
-        echo $e->getMessage();
-        exit(1);
-}
 // created: 2015-02-09 15:42:28
 $sugar_config = array (
   'admin_access_control' => false,
@@ -61,14 +52,14 @@ $sugar_config = array (
   'datef' => 'm/d/Y',
   'dbconfig' => 
   array (
-    'db_host_name' => getenv('DB_HOST'),
-    'db_host_instance' => getenv('DB_HOST_INSTANCE'),
-    'db_user_name' => getenv('DB_USER'),
-    'db_password' => getenv('DB_PASS'),
-    'db_name' => getenv('DB_NAME'),
-    'db_type' => getenv('DB_TYPE'),
-    'db_port' => getenv('DB_PORT'),
-    'db_manager' => getenv('DB_MANAGER'),
+    'db_host_name' => '',
+    'db_host_instance' => '',
+    'db_user_name' => '',
+    'db_password' => '',
+    'db_name' => '',
+    'db_type' => '',
+    'db_port' => '',
+    'db_manager' => '',
   ),
   'dbconfigoption' => 
   array (
@@ -218,7 +209,7 @@ $sugar_config = array (
   'export_delimiter' => ',',
   'export_excel_compatible' => false,
   'history_max_viewed' => 50,
-  'host_name' => getenv('HOST'),
+  'host_name' => '',
   'import_max_execution_time' => 3600,
   'import_max_records_per_file' => 100,
   'import_max_records_total_limit' => '',
@@ -310,7 +301,7 @@ $sugar_config = array (
   'session_dir' => '',
   'showDetailData' => true,
   'showThemePicker' => true,
-  'site_url' => getenv('SITE_URL'),
+  'site_url' => '',
   'slow_query_time_msec' => '100',
   'sugar_version' => '6.5.20',
   'sugarbeet' => true,
