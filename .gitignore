@@ -51,6 +51,7 @@ silentUpgrade*.php
 
 ## IDE specific items
 # Eclipse
+.buildpath
 *.pydevproject
 .project
 .metadata
