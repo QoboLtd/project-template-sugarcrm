@@ -44,7 +44,7 @@ crm/silentUpgrade*.php
 # Logs files can safely be ignored.
 crm/*.log
 # The new upload directories (since 6.4).
-crm//upload/*
+crm/upload/*
 !crm/upload/upgrades
 !crm/upload/upgrades/*
 crm/upload_backup/*
