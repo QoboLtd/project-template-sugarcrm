@@ -1,6 +1,6 @@
 server {
 	server_name %%NGINX_SITE_MAIN%% %%NGINX_SITE_OTHER%%;
-	root %%NGINX_ROOT_PREFIX%%/%%NGINX_SITE_MAIN%%;
+	root %%NGINX_ROOT_PREFIX%%/%%NGINX_SITE_MAIN%%/crm;
 
 	access_log %%NGINX_LOG_PREFIX%%/%%NGINX_SITE_MAIN%%-access.log;
 	error_log %%NGINX_LOG_PREFIX%%/%%NGINX_SITE_MAIN%%-error.log;
