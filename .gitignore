@@ -2,52 +2,52 @@ vendor/
 .env
 etc/nginx.conf
 
-## Reference from SugarCRM github
+## Reference from SugarCRM github + update for our paths
 ##  https://github.com/github/gitignore/blob/master/SugarCRM.gitignore
 ##  https://github.com/sugarcrm/sugarcrm_dev/blob/master/.gitignore
 
 # Ignore custom .htaccess stuff.
-#/.htaccess
+#crm/.htaccess
 
 # Ignore large parts of the annoying cache directory without breaking things.
-#/cache/csv/*
-#/cache/dashlets/*
-#/cache/diagnostic/*
-#/cache/dynamic_fields/*
-#/cache/feeds/*
-#/cache/import/*
-#/cache/include/*
-#/cache/jsLanguage/*
-#/cache/modules/*
-#!/cache/modules/emails
-#!/cache/modules/Emails
-#/cache/pdf/*
-#/cache/smarty/cache/*
-#/cache/smarty/templates_c/*
-#/cache/themes/*
-#/cache/xml/*
-/cache/*
+#crm/cache/csv/*
+#crm/cache/dashlets/*
+#crm/cache/diagnostic/*
+#crm/cache/dynamic_fields/*
+#crm/cache/feeds/*
+#crm/cache/import/*
+#crm/cache/include/*
+#crm/cache/jsLanguage/*
+#crm/cache/modules/*
+#!crm/cache/modules/emails
+#!crm/cache/modules/Emails
+#crm/cache/pdf/*
+#crm/cache/smarty/cache/*
+#crm/cache/smarty/templates_c/*
+#crm/cache/themes/*
+#crm/cache/xml/*
+crm/cache/*
 
 # Ignore some files and directories from the custom directory.
-/custom/history/*
-/custom/modulebuilder/*
-/custom/working/*
-/custom/modules/*/Ext/
-/custom/application/Ext/*
+crm/custom/history/*
+crm/custom/modulebuilder/*
+crm/custom/working/*
+crm/custom/modules/*/Ext/
+crm/custom/application/Ext/*
 
 # Custom configuration should also be ignored.
-#/config.php
-#/config_override.php
+#crm/config.php
+#crm/config_override.php
 
 # The silent upgrade scripts aren't needed.
-silentUpgrade*.php
+crm/silentUpgrade*.php
 # Logs files can safely be ignored.
-*.log
+crm/*.log
 # The new upload directories (since 6.4).
-/upload/*
-!/upload/upgrades
-!/upload/upgrades/*
-/upload_backup/*
+crm//upload/*
+!crm/upload/upgrades
+!crm/upload/upgrades/*
+crm/upload_backup/*
 
 ## IDE specific items
 # Eclipse
@@ -91,12 +91,12 @@ Desktop.ini
 
 ## Qobo
 # ZuckerReports
-#custom/ZuckerReports2/archive/*
+#crm/custom/ZuckerReports2/archive/*
 # qobo folder
-/qobo/test/*
-/qobo/public/*
-/qobo/config/config.ini
-/qobo/scripts/config.sh
-#qobo/scripts/backup_configrecords.sh
-/qobo/extension/ProspectLists/dynamicTargetLists_config.php
+crm/qobo/test/*
+crm/qobo/public/*
+crm/qobo/config/config.ini
+crm/qobo/scripts/config.sh
+#crmqobo/scripts/backup_configrecords.sh
+crm/qobo/extension/ProspectLists/dynamicTargetLists_config.php
 *.qbini
